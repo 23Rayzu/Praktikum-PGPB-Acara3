@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".MainActivity">
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Calculator App"
+        android:textColor="#1D1D1D"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Input Field for First Number -->
+    <EditText
+        android:id="@+id/et_firstNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DADADA"
+        android:hint="Masukan pertama"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#1D1D1D"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Input Field for Second Number -->
+    <EditText
+        android:id="@+id/et_secondNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#DADADA"
+        android:hint="Masukan kedua"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#1D1D1D"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_firstNumber"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Text for Hasil -->
+    <TextView
+        android:id="@+id/tv_resultLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Hasil"
+        android:textColor="#1D1D1D"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_secondNumber" />
+
+    <!-- Divider Line -->
+
+    <!-- Button X -->
+
+    <View
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="#1D1D1D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultLabel"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/btn_multiply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/purple"
+        android:text="X"
+        android:textColor="#1D1D1D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultLabel"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- Button / -->
+    <Button
+        android:id="@+id/btn_divide"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/green"
+        android:text="/"
+        android:textColor="#1D1D1D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn_multiply"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultLabel"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- Button - -->
+    <Button
+        android:id="@+id/btn_subtract"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/red"
+        android:text="-"
+        android:textColor="#1D1D1D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn_divide"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultLabel"
+        app:layout_constraintWidth_percent="0.2" />
+
+    <!-- Button + -->
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/blue"
+        android:text="+"
+        android:textColor="#1D1D1D"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/btn_subtract"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resultLabel"
+        app:layout_constraintWidth_percent="0.2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
